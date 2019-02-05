@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,499 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="nw3-tt-Vle">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOK-Zd-ZHm">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="127"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="hLi-5m-qeE">
+                                        <rect key="frame" x="0.0" y="128" width="1024" height="127.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAZ-LR-OvZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="127.5"/>
+                                                <state key="normal" title="("/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLq-nI-3nz">
+                                                <rect key="frame" x="102.5" y="0.0" width="101.5" height="127.5"/>
+                                                <state key="normal" title=")"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdS-Uc-rX3">
+                                                <rect key="frame" x="205" y="0.0" width="101.5" height="127.5"/>
+                                                <state key="normal" title="mc"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EoZ-LU-lj8">
+                                                <rect key="frame" x="307.5" y="0.0" width="101.5" height="127.5"/>
+                                                <state key="normal" title="m+"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMJ-7Q-lhC">
+                                                <rect key="frame" x="410" y="0.0" width="101.5" height="127.5"/>
+                                                <state key="normal" title="m-"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smq-DJ-7Qk">
+                                                <rect key="frame" x="512.5" y="0.0" width="101.5" height="127.5"/>
+                                                <state key="normal" title="mr"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8n-ZN-q0w" customClass="BorderButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="615" y="0.0" width="101.5" height="127.5"/>
+                                                <color key="backgroundColor" red="0.41165632009506226" green="0.39608168601989746" blue="0.39607837796211243" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="AC">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="funcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uQV-e7-FEU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ppz-xs-JvT" customClass="BorderButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="717.5" y="0.0" width="101.5" height="127.5"/>
+                                                <color key="backgroundColor" red="0.41165632009506226" green="0.39608168601989746" blue="0.39607837796211243" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="+/-">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="funcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F1T-eD-JYm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzr-PA-kR6" customClass="BorderButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="820" y="0.0" width="101.5" height="127.5"/>
+                                                <color key="backgroundColor" red="0.41165632009506226" green="0.39608168601989746" blue="0.39607837796211243" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="%">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="funcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sd6-cq-oRO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSg-cZ-qIR" customClass="BorderButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="922.5" y="0.0" width="101.5" height="127.5"/>
+                                                <color key="backgroundColor" red="0.94614142179489136" green="0.64031010866165161" blue="0.23515152931213379" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="/">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="mathOperationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fqR-lA-Ahs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="fWe-WZ-RJx">
+                                        <rect key="frame" x="0.0" y="256.5" width="1024" height="127"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5n-qK-b6X">
+                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="127"/>
+                                                <state key="normal" title="2nd"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvx-l9-PLF">
+                                                <rect key="frame" x="102.5" y="0.0" width="101.5" height="127"/>
+                                                <state key="normal" title="x2"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egy-UM-EIb">
+                                                <rect key="frame" x="205" y="0.0" width="101.5" height="127"/>
+                                                <state key="normal" title="x3"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrU-0I-0dq">
+                                                <rect key="frame" x="307.5" y="0.0" width="101.5" height="127"/>
+                                                <state key="normal" title="xy"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2i-NN-zb8">
+                                                <rect key="frame" x="410" y="0.0" width="101.5" height="127"/>
+                                                <state key="normal" title="ex"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIf-S9-oYX">
+                                                <rect key="frame" x="512.5" y="0.0" width="101.5" height="127"/>
+                                                <state key="normal" title="10x"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="145-dM-Brb" customClass="BorderButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="615" y="0.0" width="101.5" height="127"/>
+                                                <color key="backgroundColor" red="0.49807119369506836" green="0.49795722961425781" blue="0.50196170806884766" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lCX-r7-tSp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJc-ZH-YVx" customClass="BorderButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="717.5" y="0.0" width="101.5" height="127"/>
+                                                <color key="backgroundColor" red="0.49807119369506836" green="0.49795722961425781" blue="0.50196170806884766" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iEU-vr-BOD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPf-C0-116" customClass="BorderButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="820" y="0.0" width="101.5" height="127"/>
+                                                <color key="backgroundColor" red="0.49807119369506836" green="0.49795722961425781" blue="0.50196170806884766" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Us-XI-OfS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1VH-dj-5zj" customClass="BorderButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="922.5" y="0.0" width="101.5" height="127"/>
+                                                <color key="backgroundColor" red="0.94614142179489136" green="0.64031010866165161" blue="0.23515152931213379" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="X">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="mathOperationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qhB-D3-O16"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="s10-8I-jri">
+                                        <rect key="frame" x="0.0" y="384.5" width="1024" height="127"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lk6-ON-K72">
+                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="127"/>
+                                                <state key="normal" title="Button"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kax-K9-lNC">
+                                                <rect key="frame" x="102.5" y="0.0" width="101.5" height="127"/>
+                                                <state key="normal" title="Button"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5p-aS-2Wf">
+                                                <rect key="frame" x="205" y="0.0" width="101.5" height="127"/>
+                                                <state key="normal" title="Button"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnN-fo-60T">
+                                                <rect key="frame" x="307.5" y="0.0" width="101.5" height="127"/>
+                                                <state key="normal" title="Button"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3F-b1-Wfd">
+                                                <rect key="frame" x="410" y="0.0" width="101.5" height="127"/>
+                                                <state key="normal" title="Button"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrZ-Bf-jTr">
+                                                <rect key="frame" x="512.5" y="0.0" width="101.5" height="127"/>
+                                                <state key="normal" title="log10"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beH-AN-S6X" customClass="BorderButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="615" y="0.0" width="101.5" height="127"/>
+                                                <color key="backgroundColor" red="0.49807119369506836" green="0.49795722961425781" blue="0.50196170806884766" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3fW-AV-L9v"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWH-Pj-W6z" customClass="BorderButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="717.5" y="0.0" width="101.5" height="127"/>
+                                                <color key="backgroundColor" red="0.49807119369506836" green="0.49795722961425781" blue="0.50196170806884766" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MJ2-nS-3xb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="724-rb-vHg" customClass="BorderButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="820" y="0.0" width="101.5" height="127"/>
+                                                <color key="backgroundColor" red="0.49807119369506836" green="0.49795722961425781" blue="0.50196170806884766" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i3e-gk-DD7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chv-De-alX" customClass="BorderButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="922.5" y="0.0" width="101.5" height="127"/>
+                                                <color key="backgroundColor" red="0.94614142179489136" green="0.64031010866165161" blue="0.23515152931213379" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="-">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="mathOperationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uZJ-8K-iuD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="gd8-TN-ig2">
+                                        <rect key="frame" x="0.0" y="512.5" width="1024" height="127.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ndd-9U-71B">
+                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="127.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlY-kV-16K">
+                                                <rect key="frame" x="102.5" y="0.0" width="101.5" height="127.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAU-8H-z7w">
+                                                <rect key="frame" x="205" y="0.0" width="101.5" height="127.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qr6-iE-sbZ">
+                                                <rect key="frame" x="307.5" y="0.0" width="101.5" height="127.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Prq-oj-d0i">
+                                                <rect key="frame" x="410" y="0.0" width="101.5" height="127.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66d-VL-xRt">
+                                                <rect key="frame" x="512.5" y="0.0" width="101.5" height="127.5"/>
+                                                <state key="normal" title="ee"/>
+                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipo-2g-b2A" customClass="BorderButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="615" y="0.0" width="101.5" height="127.5"/>
+                                                <color key="backgroundColor" red="0.49807119369506836" green="0.49795722961425781" blue="0.50196170806884766" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bjQ-mP-PKG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVz-fR-7ng" customClass="BorderButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="717.5" y="0.0" width="101.5" height="127.5"/>
+                                                <color key="backgroundColor" red="0.49807119369506836" green="0.49795722961425781" blue="0.50196170806884766" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XFJ-TP-A3y"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0B-hz-i7Y" customClass="BorderButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="820" y="0.0" width="101.5" height="127.5"/>
+                                                <color key="backgroundColor" red="0.49807119369506836" green="0.49795722961425781" blue="0.50196170806884766" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3aa-rr-ev3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NK3-fg-OWE" customClass="BorderButton" customModule="calculator" customModuleProvider="target">
+                                                <rect key="frame" x="922.5" y="0.0" width="101.5" height="127.5"/>
+                                                <color key="backgroundColor" red="0.94614142179489136" green="0.64031010866165161" blue="0.23515152931213379" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="+">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="mathOperationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WHU-tB-A48"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="w0u-pU-wk2">
+                                        <rect key="frame" x="0.0" y="641" width="1024" height="127"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="OJt-h1-qpT">
+                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="127"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="v9u-yC-lR9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="127"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="LEf-4C-56v">
+                                                                <rect key="frame" x="0.0" y="0.0" width="615" height="127"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XKd-TL-HzS">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="127"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rj9-A5-4DC">
+                                                                        <rect key="frame" x="102.5" y="0.0" width="102" height="127"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCO-5T-15y">
+                                                                        <rect key="frame" x="205.5" y="0.0" width="101.5" height="127"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeL-o3-LPo">
+                                                                        <rect key="frame" x="308" y="0.0" width="101.5" height="127"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANh-K0-vxF">
+                                                                        <rect key="frame" x="410.5" y="0.0" width="102" height="127"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgO-El-aCy">
+                                                                        <rect key="frame" x="513.5" y="0.0" width="101.5" height="127"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                    </button>
+                                                                </subviews>
+                                                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                                            </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppR-g2-ZMc" customClass="BorderButton" customModule="calculator" customModuleProvider="target">
+                                                                <rect key="frame" x="616" y="0.0" width="203" height="127"/>
+                                                                <color key="backgroundColor" red="0.49807119370000003" green="0.4979572296" blue="0.50196170809999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="203" id="n2h-2E-KGI"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="0">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aTR-wV-agJ"/>
+                                                                </connections>
+                                                            </button>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="vux-Dh-OgR">
+                                                                <rect key="frame" x="820" y="0.0" width="204" height="127"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tU3-ad-j3x" customClass="BorderButton" customModule="calculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="127"/>
+                                                                        <color key="backgroundColor" red="0.49807119370000003" green="0.4979572296" blue="0.50196170809999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="101.5" id="XMO-HR-JcN"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title=".">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bga-Dk-5Id"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Snz-fp-mRh" customClass="BorderButton" customModule="calculator" customModuleProvider="target">
+                                                                        <rect key="frame" x="102.5" y="0.0" width="101.5" height="127"/>
+                                                                        <color key="backgroundColor" red="0.94614142180000005" green="0.64031010870000005" blue="0.2351515293" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="101.5" id="7PF-Mt-gam"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                        <state key="normal" title="=">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="equallBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YJw-96-OQG"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nw3-tt-Vle" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7tu-n7-6JM"/>
+                            <constraint firstAttribute="bottom" secondItem="nw3-tt-Vle" secondAttribute="bottom" id="Bbb-nj-vDM"/>
+                            <constraint firstAttribute="trailing" secondItem="nw3-tt-Vle" secondAttribute="trailing" id="D86-Y2-ijG"/>
+                            <constraint firstAttribute="bottom" secondItem="nw3-tt-Vle" secondAttribute="bottom" id="P9V-5a-aNA"/>
+                            <constraint firstItem="nw3-tt-Vle" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ala-AP-3OX"/>
+                            <constraint firstAttribute="trailing" secondItem="nw3-tt-Vle" secondAttribute="trailing" id="bkI-hC-JX0"/>
+                            <constraint firstItem="nw3-tt-Vle" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bso-yo-2Pk"/>
+                            <constraint firstItem="nw3-tt-Vle" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zl2-Nt-Eus"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Bbb-nj-vDM"/>
+                                <exclude reference="bkI-hC-JX0"/>
+                                <exclude reference="bso-yo-2Pk"/>
+                                <exclude reference="zl2-Nt-Eus"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Bbb-nj-vDM"/>
+                                <include reference="bkI-hC-JX0"/>
+                                <include reference="bso-yo-2Pk"/>
+                                <include reference="zl2-Nt-Eus"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="addBtn" destination="NK3-fg-OWE" id="c3p-24-Vjm"/>
+                        <outlet property="divideBtn" destination="qSg-cZ-qIR" id="FZl-4Y-vCZ"/>
+                        <outlet property="equalBtn" destination="Snz-fp-mRh" id="wkF-hz-Hxd"/>
+                        <outlet property="multiplyBtn" destination="1VH-dj-5zj" id="bR6-VG-y7R"/>
+                        <outlet property="outputLbl" destination="nOK-Zd-ZHm" id="jpl-Dh-2v4"/>
+                        <outlet property="subtractBtn" destination="chv-De-alX" id="jPI-ME-70a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

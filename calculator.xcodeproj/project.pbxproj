@@ -12,6 +12,8 @@
 		4735C2F321EBB9BE00792033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4735C2F121EBB9BE00792033 /* Main.storyboard */; };
 		4735C2F521EBB9BF00792033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4735C2F421EBB9BF00792033 /* Assets.xcassets */; };
 		4735C2F821EBB9BF00792033 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4735C2F621EBB9BF00792033 /* LaunchScreen.storyboard */; };
+		4735C30121EBCD7600792033 /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4735C30021EBCD7600792033 /* BorderButton.swift */; };
+		47D7900E2209CAA10057ADD0 /* ButtonAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7900D2209CAA10057ADD0 /* ButtonAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		4735C2F421EBB9BF00792033 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4735C2F721EBB9BF00792033 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4735C2F921EBB9BF00792033 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4735C30021EBCD7600792033 /* BorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
+		47D7900D2209CAA10057ADD0 /* ButtonAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,7 @@
 		4735C2E121EBB9BE00792033 = {
 			isa = PBXGroup;
 			children = (
+				4735C2FF21EBCD5200792033 /* Views */,
 				4735C2EC21EBB9BE00792033 /* calculator */,
 				4735C2EB21EBB9BE00792033 /* Products */,
 			);
@@ -60,8 +65,17 @@
 				4735C2F421EBB9BF00792033 /* Assets.xcassets */,
 				4735C2F621EBB9BF00792033 /* LaunchScreen.storyboard */,
 				4735C2F921EBB9BF00792033 /* Info.plist */,
+				47D7900D2209CAA10057ADD0 /* ButtonAnimation.swift */,
 			);
 			path = calculator;
+			sourceTree = "<group>";
+		};
+		4735C2FF21EBCD5200792033 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4735C30021EBCD7600792033 /* BorderButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47D7900E2209CAA10057ADD0 /* ButtonAnimation.swift in Sources */,
 				4735C2F021EBB9BE00792033 /* ViewController.swift in Sources */,
 				4735C2EE21EBB9BE00792033 /* AppDelegate.swift in Sources */,
+				4735C30121EBCD7600792033 /* BorderButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
